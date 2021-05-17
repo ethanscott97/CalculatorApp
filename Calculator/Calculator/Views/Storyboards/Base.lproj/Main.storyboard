@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-wh-vvc">
+                                <rect key="frame" x="20.5" y="389.5" width="373" height="372.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hh5-q4-QeV">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="87"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYo-8K-htN" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uYo-8K-htN" secondAttribute="height" multiplier="1:1" id="5BW-pF-Dja"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="sevenButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TuD-08-lPd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bay-w3-NTh" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bay-w3-NTh" secondAttribute="height" multiplier="1:1" id="4bh-Nx-YDZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="eightButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k7t-pi-7zY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BK-Nk-OXZ" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="190.5" y="0.0" width="87" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0BK-Nk-OXZ" secondAttribute="height" multiplier="1:1" id="vA6-yD-TZ3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="nineButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcn-Cm-ur8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBb-rt-IXs" customClass="SymbolButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="285.5" y="0.0" width="87.5" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="RBb-rt-IXs" secondAttribute="height" multiplier="1:1" id="8O9-6u-Ymh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="÷"/>
+                                                <connections>
+                                                    <action selector="divisionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nZ5-L7-9BL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Zi-pN-sY2">
+                                        <rect key="frame" x="0.0" y="95" width="373" height="87"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRt-ps-EMV" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pRt-ps-EMV" secondAttribute="height" multiplier="1:1" id="jMn-tY-p6o"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="fourButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N9s-9y-Lco"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv2-bp-wZj" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Tv2-bp-wZj" secondAttribute="height" multiplier="1:1" id="AuF-2o-g6c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="fiveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eU6-TH-V6t"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3Z-iH-zlh" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="190.5" y="0.0" width="87" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="h3Z-iH-zlh" secondAttribute="height" multiplier="1:1" id="bQl-VA-DIE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="sixButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ErF-N6-7LI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZf-Is-0ge" customClass="SymbolButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="285.5" y="0.0" width="87.5" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yZf-Is-0ge" secondAttribute="height" multiplier="1:1" id="f51-N4-dmb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                                <state key="normal" title="✕"/>
+                                                <connections>
+                                                    <action selector="multiplicationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aE2-eb-MHN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BdJ-Sr-F4p">
+                                        <rect key="frame" x="0.0" y="190" width="373" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRp-oq-GwH" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hRp-oq-GwH" secondAttribute="height" multiplier="1:1" id="oHE-Vz-mg9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="oneButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7H-sw-NcT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5br-yA-ecC" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87" height="87.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5br-yA-ecC" secondAttribute="height" multiplier="1:1" id="nq3-6d-arV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="twoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qk3-HU-bOl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFq-RC-YqM" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="190.5" y="0.0" width="87" height="87.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GFq-RC-YqM" secondAttribute="height" multiplier="1:1" id="4yF-ir-nQa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="threeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvb-Nh-ciV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGT-Nw-h7k" customClass="SymbolButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="285.5" y="0.0" width="87.5" height="87.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="PGT-Nw-h7k" secondAttribute="height" multiplier="1:1" id="am1-eD-vmM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="–"/>
+                                                <connections>
+                                                    <action selector="subtractionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eHn-Ch-dYx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sKx-KO-rZW">
+                                        <rect key="frame" x="0.0" y="285.5" width="373" height="87"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5V-SP-Ktb" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="r5V-SP-Ktb" secondAttribute="height" multiplier="1:1" id="4yT-Iq-6cS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="zeroButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ia-of-CiO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRd-nI-dT5" customClass="IntegerButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="TRd-nI-dT5" secondAttribute="height" multiplier="1:1" id="30d-tF-YNt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="decimalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTE-xV-aCi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nM-95-xd4" customClass="SymbolButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="190.5" y="0.0" width="87" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0nM-95-xd4" secondAttribute="height" multiplier="1:1" id="9i4-1A-FdX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="equalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwK-Nw-Hz8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8G-kY-ebR" customClass="SymbolButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="285.5" y="0.0" width="87.5" height="87"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Y8G-kY-ebR" secondAttribute="height" multiplier="1:1" id="cNh-rL-FhZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="additionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2z-4R-AAD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAu-p9-Hj8" customClass="ResultLabel" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="285.5" width="373" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="0WR-sS-GTL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOR-Sm-MTB" customClass="ClearButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="778" width="373" height="45"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVQ-Xc-FD6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hl9-wh-vvc" secondAttribute="bottom" constant="100" id="6Iu-l6-kou"/>
+                            <constraint firstItem="vOR-Sm-MTB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="MHB-he-qpD"/>
+                            <constraint firstItem="sAu-p9-Hj8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MRp-KZ-rZ0"/>
+                            <constraint firstItem="hl9-wh-vvc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VSv-NY-B6g"/>
+                            <constraint firstItem="vOR-Sm-MTB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aHp-FV-wGD"/>
+                            <constraint firstItem="sAu-p9-Hj8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="gaN-vU-sPl"/>
+                            <constraint firstItem="hl9-wh-vvc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="m0T-Cu-FWR"/>
+                            <constraint firstItem="vOR-Sm-MTB" firstAttribute="top" secondItem="hl9-wh-vvc" secondAttribute="bottom" constant="16" id="tjN-99-Gnb"/>
+                            <constraint firstItem="hl9-wh-vvc" firstAttribute="top" secondItem="sAu-p9-Hj8" secondAttribute="bottom" constant="16" id="vVF-bh-qbL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="sAu-p9-Hj8" id="moB-5v-0OJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="107"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
